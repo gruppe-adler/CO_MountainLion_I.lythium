@@ -1,4 +1,4 @@
-["BLU_F", "US_OCP"] call GRAD_Loadout_fnc_FactionSetLoadout;
+["BLU_F", "USOCP"] call GRAD_Loadout_fnc_FactionSetLoadout;
 ["OPF_F", "Taliban"] call GRAD_Loadout_fnc_FactionSetLoadout;
 
 /*
