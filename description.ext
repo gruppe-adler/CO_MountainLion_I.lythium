@@ -20,10 +20,22 @@ class Header
 	maxPlayers = 39;
 };
 
-class cfgFunctions {  
+class cfgFunctions {
+	#include "node_modules\grad-loadout\cfgFunctions.hpp"
+
 	#include "grad-ambient\cfgFunctions.hpp"
 	#include "grad-civPartisans\cfgFunctions.hpp"
 	#include "grad-herding\cfgFunctions.hpp"
+};
+
+class Loadouts {
+    baseDelay = 1;      // base delay in seconds before applying loadouts on mission start
+    handleRadios = 1;   // radios are handled by grad-loadout
+    resetLoadout = 1;   // start with empty loadouts instead of modifying existing loadout
+
+  	class Faction {
+        #include "node_modules\grad-factions\loadouts.hpp"
+    };
 };
 
 class cfgSounds {
