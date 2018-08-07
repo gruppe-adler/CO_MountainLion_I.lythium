@@ -1,0 +1,31 @@
+author = "Nomisum for Gruppe Adler";  //appears as author in overview and loading screen
+
+enableDebugConsole = 1;
+
+respawn = 3;
+respawnDelay = 9999;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;//Dont respawn on start.
+respawnDialog = 0;
+respawnButton = 0;
+
+// loadScreen = "pic\loading.jpg";
+OnLoadName    = "CO MOUNTAIN LION";
+OnLoadMission = "Special Forces going into a hostage situation.";
+
+class Header
+{
+	gameType = Seize;
+	minPlayers = 15;
+	maxPlayers = 39;
+};
+
+class cfgFunctions {  
+	#include "grad-ambient\cfgFunctions.hpp"
+	#include "grad-civPartisans\cfgFunctions.hpp"
+	#include "grad-herding\cfgFunctions.hpp"
+};
+
+class cfgSounds {
+	#include "grad-herding\cfgSounds.hpp"
+};
