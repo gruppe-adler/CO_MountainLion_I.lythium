@@ -1,9 +1,7 @@
 titleText ["", "BLACK FADED", 0];
-0 fadeSound 0;
 sleep 5;
 
 playMusic "muse_high";
-introRadio say3D ["muse_low", 200];
 
 titleText ["", "BLACK IN", 15];
 15 fadeSound 1;
@@ -41,6 +39,8 @@ sleep 5;
 
 _introPicWhite ctrlsetFade 1;
 _introPicWhite ctrlCommit 10;
+
+sleep 10;
 
 sleep 50;
 

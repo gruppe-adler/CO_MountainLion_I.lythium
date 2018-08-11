@@ -16,6 +16,7 @@ class GRAD_introCam {
             class camCommands;
             class camFree;
             class camRotate;
+            class marchStart;
             class play;
             class textEffects;
     };

@@ -4,6 +4,8 @@ private _multiPlier = 1;
 
 setTimeMultiplier 100;
 
+[] call GRAD_introCam_fnc_marchStart;
+
 sleep 40;
 
 for "_i" from 0 to 99 do {
