@@ -65,11 +65,19 @@ private _headgear = selectRandom [
 	"LOP_H_Pakol"
 ];
 
+private _beard = selectRandom [
+	"TRYK_Beard_BK",
+	"TRYK_Beard_BK",
+	"TRYK_Beard_BK",
+	"TRYK_Beard_BW",
+	"TRYK_Beard_Gr"
+];
+
 if (_armed) then {
 	_unit setUnitLoadout [
 		["rhs_weap_akms","rhs_acc_dtkakm","","",["rhs_30Rnd_762x39mm",30],[],""],[],[],
 		[_uniform,[["ACE_fieldDressing",1],["ACE_packingBandage",1],["ACE_morphine",1],["ACE_tourniquet",1],["rhs_30Rnd_762x39mm",1,30]]],["V_TacVest_blk",[["rhs_30Rnd_762x39mm",3,30],["rhs_mag_f1",1,1]]],[],
-		_headgear,"G_Bandanna_oli",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]
+		_headgear,_beard,[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]
 	];
 
 	if (random 2 > 0.7) then {
@@ -77,5 +85,7 @@ if (_armed) then {
 		_unit addMagazines ["rhs_m136_mag", 1];
 	};
 } else {
-	_unit setUnitLoadout [[],[],[],[_uniform,[]],[],[],_headgear,"",[],["","","","","",""]];
+	_unit setUnitLoadout [[],[],[],[_uniform,[]],[],[],_headgear,_beard,[],["","","","","",""]];
 };
+
+_unit enableDynamicSimulation true;

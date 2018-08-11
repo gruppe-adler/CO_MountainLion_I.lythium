@@ -1,5 +1,11 @@
 class GRAD_herding {
 
+    class client {
+        file = grad-herding\functions\client;
+
+        class addGestureHandler;
+    };
+
     class server {
         file = grad-herding\functions\server;
 

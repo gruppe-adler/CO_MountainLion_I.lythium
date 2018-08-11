@@ -24,6 +24,7 @@ class cfgFunctions {
 	#include "node_modules\grad-loadout\cfgFunctions.hpp"
 
 	#include "grad-ambient\cfgFunctions.hpp"
+	#include "grad-introCam\cfgFunctions.hpp"
 	#include "grad-civPartisans\cfgFunctions.hpp"
 	#include "grad-herding\cfgFunctions.hpp"
 };
@@ -40,4 +41,20 @@ class Loadouts {
 
 class cfgSounds {
 	#include "grad-herding\cfgSounds.hpp"
+
+	class muse_low
+	{
+	  name="muse_low";
+	  sound[]={"audio\muse_low.ogg", 1, 1};
+	  titles[]={};
+	};	
+};
+
+class cfgMusic {
+	class muse_high
+	{
+	  name="muse_high";
+	  sound[]={"audio\muse_high.ogg", 1, 1};
+	  titles[]={};
+	};	
 };

@@ -10,6 +10,7 @@ class grad_civPartisans {
 		  file = grad-civPartisans\functions\server;
 
       class equip;
+      class equipTraffic;
       class leafLets;
   };
 };
