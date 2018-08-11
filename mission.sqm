@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11;
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={12211.514,352.36429,18036.492};
-		dir[]={0.72373533,-0.28710628,-0.627554};
-		up[]={0.21693209,0.95789289,-0.18810309};
-		aside[]={-0.65513772,-1.9255094e-007,-0.75554645};
+		pos[]={12167.403,374.40909,17984.059};
+		dir[]={0.79603338,-0.38912946,-0.46365333};
+		up[]={0.33626914,0.92117429,-0.19586171};
+		aside[]={-0.50332206,-5.766924e-007,-0.86414075};
 	};
 };
 binarizationWanted=0;
@@ -403,7 +403,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										class data
@@ -416,6 +416,20 @@ class CustomAttributes
 												};
 											};
 											value="ace_viewdistance_enabled";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_advanced_ballistics_enabled";
 										};
 									};
 								};
@@ -434,7 +448,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										class data
@@ -461,6 +475,51 @@ class CustomAttributes
 															};
 														};
 														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
 													};
 												};
 												class Item1
@@ -16558,7 +16617,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12250.746,343.81516,17978.131};
-				angles[]={-0,5.4245529,0};
+				angles[]={0,5.4245529,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16617,7 +16676,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12235.246,343.81516,17962.256};
-				angles[]={-0,5.4245529,0};
+				angles[]={0,5.4245529,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16676,7 +16735,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12219.746,343.81516,17945.971};
-				angles[]={-0,5.4245529,0};
+				angles[]={0,5.4245529,0};
 			};
 			side="Empty";
 			flags=4;

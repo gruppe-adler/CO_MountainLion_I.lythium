@@ -40,7 +40,7 @@ private _chairs = [
 ];
 
 {
-	if (!_x isEqualTo slot_platoonlead) then {
+	if (!(_x isEqualTo slot_platoonlead)) then {
 		private _chair = _chairs select _forEachIndex;
 		[_chair, _x] remoteExec ["acex_sitting_fnc_sit", _x];
 	};
