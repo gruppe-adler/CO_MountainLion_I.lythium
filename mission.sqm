@@ -8,7 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=1135;
+		nextID=1139;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12113.6,377.01279,17930.744};
-		dir[]={0.87669355,-0.44333887,0.18703832};
-		up[]={0.43362573,0.8963328,0.092511147};
-		aside[]={0.2086622,-1.9506842e-007,-0.97805828};
+		pos[]={19335.266,169.367,1583.8446};
+		dir[]={-0.26710317,-0.64601976,-0.71510112};
+		up[]={-0.2260408,0.76333308,-0.60516518};
+		aside[]={-0.93680954,1.3890676e-006,0.34991744};
 	};
 };
 binarizationWanted=0;
@@ -88,13 +88,14 @@ addons[]=
 	"ace_medical",
 	"rhsusf_vehicles",
 	"A3_Structures_F_Mil_Flags",
-	"rhsusf_c_HEMTT_A4"
+	"rhsusf_c_HEMTT_A4",
+	"rhsusf_c_fmtv"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=42;
 		class Item0
 		{
 			className="A3_Modules_F_Tacops";
@@ -361,6 +362,13 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item41
+		{
+			className="rhsusf_c_fmtv";
+			name="FMTV Trucks";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 	};
 };
 randomSeed=16502480;
@@ -604,7 +612,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=426;
+		items=428;
 		class Item0
 		{
 			dataType="Logic";
@@ -18147,7 +18155,7 @@ class Mission
 				class Item1
 				{
 					dataType="Waypoint";
-					position[]={12454.84,341.95001,17912.729};
+					position[]={12461.875,341.95001,18072.75};
 					class Effects
 					{
 					};
@@ -18158,7 +18166,7 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
-					position[]={11951.334,341.944,18061.076};
+					position[]={11809.75,365.59967,18581.25};
 					class Effects
 					{
 					};
@@ -18170,7 +18178,6 @@ class Mission
 			class Attributes
 			{
 				garbageCollect=1;
-				speedMode="LIMITED";
 			};
 			class CrewLinks
 			{
@@ -18604,6 +18611,83 @@ class Mission
 			{
 			};
 			id=1133;
+		};
+		class Item426
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12117.625,341.95145,17874.676};
+						angles[]={-0,3.8243661,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=1137;
+					type="rhsusf_army_ocp_driver_armored";
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={11340.886,341.95001,17173.279};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1138;
+					type="Move";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1137;
+						item1=1136;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=1135;
+		};
+		class Item427
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12117.625,344.1535,17874.625};
+				angles[]={-0,3.8243661,0};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=1136;
+			type="rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy";
 		};
 	};
 	class Connections

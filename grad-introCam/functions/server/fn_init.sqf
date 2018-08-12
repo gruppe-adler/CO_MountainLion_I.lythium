@@ -13,3 +13,9 @@ for "_i" from 0 to 99 do {
 	_multiPlier = _multiPlier - 1;
 	sleep 1;
 };
+
+sleep 50;
+
+{
+	deleteVehicle _x;
+} forEach units group march_leader;
