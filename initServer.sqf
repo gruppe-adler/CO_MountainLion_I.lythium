@@ -1,7 +1,6 @@
-/*
 [] spawn GRAD_introCam_fnc_init;
 setDate [2015, 10, 06, 5, 0];
-*/
+
 
 private _chairs = [
 	chair_1,

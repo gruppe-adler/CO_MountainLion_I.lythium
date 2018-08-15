@@ -51,6 +51,13 @@ class cfgMusic {
 	  sound[]={"audio\muse_high.ogg", 1, 1};
 	  titles[]={};
 	};	
+
+	class crawl
+	{
+	  name="crawl";
+	  sound[]={"audio\crawl.ogg", 1, 1};
+	  titles[]={};
+	};	
 };
 
 class CfgIdentities
