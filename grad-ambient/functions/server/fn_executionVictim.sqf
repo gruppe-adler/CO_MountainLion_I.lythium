@@ -10,22 +10,17 @@ removeHeadgear _unit;
 
 sleep random 5;
 
-[_unit, selectRandom ["Acts_CivilHiding_1", "Acts_CivilHiding_2"]] remoteExec ["switchMove", 0]; 
+[_unit, "Acts_ExecutionVictim_Loop"] remoteExec ["switchMove", 0];
 
-_unit addEventHandler ["AnimDone", {
-	if (!alive (_this select 0)) exitWith {
-		(_this select 0) removeEventHandler ["AnimDone", _thisEventHandler];
+_unit setDir 174;
+
+_unit addEventHandler ["AnimChanged", {
+	params ["_unit"];
+	_unit disableAI "ANIM";
+	if (!alive _unit) exitWith {
+		_unit removeEventHandler ["AnimChanged", _thisEventHandler];
 		// hint "removed";
 	};
 
-	[_this select 0, "Acts_CivilHiding_2"] remoteExec ["switchMove", 0]; 
-}];
-
-_unit addMPEventHandler ["MPHit", {
-	params ["_unit"];
-
-	_unit removeAllEventHandlers "AnimDone";	
-	_unit removeAllMPEventHandlers "MPHit";
-	_unit setUnconscious true;
-	_unit setDamage 1;
+	[_unit, "Acts_ExecutionVictim_Loop"] remoteExec ["switchMove", 0]; 
 }];
