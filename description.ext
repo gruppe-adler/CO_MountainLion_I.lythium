@@ -9,9 +9,9 @@ respawnOnStart = -1;//Dont respawn on start.
 respawnDialog = 0;
 respawnButton = 0;
 
-// loadScreen = "pic\loading.jpg";
-OnLoadName    = "CO MOUNTAIN LION";
-OnLoadMission = "Special Forces going into a hostage situation.";
+loadScreen = "pic\loading.jpg";
+OnLoadName    = "CO MOUNTAIN LION I";
+OnLoadMission = "US Special Forces going into a liquidation mission.";
 
 class Header
 {
@@ -27,6 +27,7 @@ class cfgFunctions {
 	#include "grad-introCam\cfgFunctions.hpp"
 	#include "grad-civPartisans\cfgFunctions.hpp"
 	#include "grad-herding\cfgFunctions.hpp"
+	#include "grad-permaChoice\cfgFunctions.hpp"
 };
 
 class Loadouts {
@@ -41,13 +42,6 @@ class Loadouts {
 
 class cfgSounds {
 	#include "grad-herding\cfgSounds.hpp"
-
-	class muse_low
-	{
-	  name="muse_low";
-	  sound[]={"audio\muse_low.ogg", 1, 1};
-	  titles[]={};
-	};	
 };
 
 class cfgMusic {

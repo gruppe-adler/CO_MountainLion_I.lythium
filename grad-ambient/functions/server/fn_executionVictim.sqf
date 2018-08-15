@@ -12,7 +12,7 @@ sleep random 5;
 
 [_unit, "Acts_ExecutionVictim_Loop"] remoteExec ["switchMove", 0];
 
-_unit setDir 174;
+_unit setDir 0;
 
 _unit addEventHandler ["AnimChanged", {
 	params ["_unit"];
