@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16594.99,59.837101,5209.5396};
-		dir[]={0.57134402,-0.48449907,0.66246015};
-		up[]={0.31643826,0.87478691,0.3669028};
-		aside[]={0.7572751,-4.1116436e-008,-0.65311772};
+		pos[]={18852.305,134.47295,4440.9424};
+		dir[]={0.8271721,-0.38463473,0.40972048};
+		up[]={0.34468094,0.92306143,0.1707297};
+		aside[]={0.44386378,-3.7637074e-007,-0.89610291};
 	};
 };
 binarizationWanted=0;
@@ -5884,7 +5884,7 @@ class Mission
 				};
 			};
 			id=393;
-			atlOffset=0.00090789795;
+			atlOffset=0.00019073486;
 		};
 		class Item172
 		{
@@ -5902,7 +5902,7 @@ class Mission
 			};
 			id=395;
 			type="LOP_ISTS_OPF_Static_DSHKM";
-			atlOffset=0.00090789795;
+			atlOffset=0.00019073486;
 		};
 		class Item173
 		{
@@ -11564,9 +11564,31 @@ class Mission
 				combatMode="GREEN";
 				behaviour="SAFE";
 				speedMode="LIMITED";
-				dynamicSimulation=1;
 			};
 			id=535;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item315
 		{
