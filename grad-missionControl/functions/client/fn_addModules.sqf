@@ -66,33 +66,9 @@ if (
   _x addEventHandler ["CuratorWaypointPlaced", {
       params ["_curator", "_group", "_waypointID"];
 
-      if (missionNamespace getVariable ["GRAD_MISSIONCONTROL_ZEUS_AI_CHARGE", false]) then {
-        {
-            _x setskill ["courage",1];
-            _x setCombatMode "RED";
-            _x ForceSpeed 10;
-            _x allowFleeing 0;
-            _x disableAI "Target";
-            _x disableAI "Autotarget";
-            _x SetUnitPos "UP";
-            _x disableAI "AUTOCOMBAT";
-            _x disableAI "COVER";
-            _x disableAI "SUPPRESSION";
-            _x disableAI "AUTOCOMBAT";
-        } forEach units _group;
-  } else {
-        {
-            _x setskill ["courage",1];
-            _x ForceSpeed -1;
-            _x allowFleeing 1;
-            _x enableAI "Target";
-            _x enableAI "Autotarget";
-            _x SetUnitPos "AUTO";
-            _x enableAI "AUTOCOMBAT";
-            _x enableAI "COVER";
-            _x enableAI "SUPPRESSION";
-            _x enableAI "AUTOCOMBAT";
-        } forEach units _group;
+  if (missionNamespace getVariable ["GRAD_MISSIONCONTROL_ZEUS_AI_CHARGE", false]) then {
+
+        [_group, _waypointID] call GRAD_missionControl_fnc_enableChargeMode;
   };
 
   }];

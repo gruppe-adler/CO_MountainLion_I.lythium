@@ -12,7 +12,8 @@ class grad_missionControl {
 		  file = grad-missionControl\functions\server;
 
       class createChairCircle;
-      class getPosInCircle;
-      
+      class disableChargeMode;
+      class enableChargeMode;
+      class getPosInCircle;      
   };
 };
