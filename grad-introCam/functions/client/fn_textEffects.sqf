@@ -42,11 +42,10 @@ _introPicWhite ctrlCommit 10;
 
 sleep 10;
 
-[ "B R I E F I N G", "27.08.2018" ] spawn BIS_fnc_infoText;
 
 sleep 50;
 
-
+[ "B R I E F I N G", "27.08.2018" ] spawn BIS_fnc_infoText;
 
 10 fadeMusic 0;
 
