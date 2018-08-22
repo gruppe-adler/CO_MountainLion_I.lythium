@@ -8,7 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=1337;
+		nextID=1343;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=18;
+		nextID=19;
 	};
 	class Camera
 	{
-		pos[]={12240.451,349.79214,17996.871};
-		dir[]={-0.76062858,-0.44329393,-0.47429073};
-		up[]={-0.37616101,0.8963747,-0.2345559};
-		aside[]={-0.52911973,-1.5599653e-008,0.848557};
+		pos[]={12230.199,364.20438,18006.934};
+		dir[]={0.3535257,-0.7028172,-0.61733985};
+		up[]={0.34927303,0.7113474,-0.60991043};
+		aside[]={-0.86779636,-2.917368e-007,-0.49695325};
 	};
 };
 binarizationWanted=0;
@@ -102,13 +102,13 @@ addons[]=
 	"rds_a2port_cman",
 	"A3_Props_F_Exp_Civilian_Garbage",
 	"A3_Structures_F_Items_Valuables",
-	"A3_Props_F_Tank_Military_TankAcc"
+	"A3_Structures_F_Heli_Ind_Cargo"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=53;
+		items=52;
 		class Item0
 		{
 			className="A3_Modules_F_Tacops";
@@ -443,13 +443,6 @@ class AddonsMetaData
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item52
-		{
-			className="A3_Props_F_Tank";
-			name="Arma 3 Tank - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -5663,7 +5656,7 @@ class Mission
 				};
 			};
 			id=393;
-			atlOffset=0.00019073486;
+			atlOffset=0.00090789795;
 		};
 		class Item163
 		{
@@ -5681,7 +5674,7 @@ class Mission
 			};
 			id=395;
 			type="LOP_ISTS_OPF_Static_DSHKM";
-			atlOffset=0.00019073486;
+			atlOffset=0.00090789795;
 		};
 		class Item164
 		{
@@ -16683,16 +16676,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12231.006,342.67896,17988.389};
+				position[]={12229.75,343.30289,17990};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableRopeAttach true;}";
 			};
-			id=1336;
-			type="Land_TankEngine_01_used_F";
+			id=1342;
+			type="Land_Cargo10_military_green_F";
 		};
 	};
 	class Connections
