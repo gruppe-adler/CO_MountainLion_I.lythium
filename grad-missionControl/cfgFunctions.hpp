@@ -14,6 +14,9 @@ class grad_missionControl {
       class createChairCircle;
       class disableChargeMode;
       class enableChargeMode;
+      class getIntel_1;
+      class getIntel_2;
+      class getIntel_3;
       class getPosInCircle;   
       class initIntel;   
   };
