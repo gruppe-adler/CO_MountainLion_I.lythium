@@ -43,6 +43,90 @@ class Loadouts {
 
 class cfgSounds {
 	#include "grad-herding\cfgSounds.hpp"
+
+	class grad_herding_shout_1
+	{
+	  name="grad_herding_shout_1";
+	  sound[]={"audio\grad_herding_shout_1.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_2
+	{
+	  name="grad_herding_shout_2";
+	  sound[]={"audio\grad_herding_shout_2.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_3
+	{
+	  name="grad_herding_shout_3";
+	  sound[]={"audio\grad_herding_shout_3.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_4
+	{
+	  name="grad_herding_shout_4";
+	  sound[]={"audio\grad_herding_shout_4.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_5
+	{
+	  name="grad_herding_shout_5";
+	  sound[]={"audio\grad_herding_shout_5.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_6
+	{
+	  name="grad_herding_shout_6";
+	  sound[]={"audio\grad_herding_shout_6.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_7
+	{
+	  name="grad_herding_shout_7";
+	  sound[]={"audio\grad_herding_shout_7.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_8
+	{
+	  name="grad_herding_shout_8";
+	  sound[]={"audio\grad_herding_shout_8.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_9
+	{
+	  name="grad_herding_shout_9";
+	  sound[]={"audio\grad_herding_shout_9.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_10
+	{
+	  name="grad_herding_shout_10";
+	  sound[]={"audio\grad_herding_shout_10.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_11
+	{
+	  name="grad_herding_shout_11";
+	  sound[]={"audio\grad_herding_shout_11.ogg", 1.5, 1};
+	  titles[]={};
+	};
+
+	class grad_herding_shout_12
+	{
+	  name="grad_herding_shout_12";
+	  sound[]={"audio\grad_herding_shout_12.ogg", 1.5, 1};
+	  titles[]={};
+	};
 };
 
 class cfgMusic {
@@ -58,7 +142,7 @@ class cfgMusic {
 	  name="crawl";
 	  sound[]={"audio\crawl.ogg", 1, 1};
 	  titles[]={};
-	};	
+	};
 };
 
 class CfgIdentities

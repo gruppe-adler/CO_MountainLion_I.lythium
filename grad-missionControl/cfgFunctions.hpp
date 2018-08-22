@@ -12,6 +12,7 @@ class grad_missionControl {
 		  file = grad-missionControl\functions\server;
 
       class createChairCircle;
+      class createTruckReinforcements;
       class disableChargeMode;
       class enableChargeMode;
       class getIntel_1;
@@ -19,5 +20,6 @@ class grad_missionControl {
       class getIntel_3;
       class getPosInCircle;   
       class initIntel;   
+      class isInsideHouse;
   };
 };

@@ -12,13 +12,18 @@ params ["_spawnPosition", ["_count",10], ["_shepherd", objNull], ["_animalType",
 
 if (!isServer) exitWith {};
 
+
+// get amount of herds created and add to counter
+private _currentIndex = (missionNamespace getVariable ["GRAD_herding_instanceCount", -1]) + 1;
+missionNamespace setVariable ["GRAD_herding_instanceCount", _currentIndex, true];
+
 private _herdArray = [_shepherd, objNull, [], []];
 private _herdAnimals = [];
 
 
 [] remoteExec ["GRAD_herding_fnc_addGestureHandler", _shepherd];
 
-/*
+
 if (!isNull _shepherd) then {
 	
 	private _pole = "Land_Net_Fence_pole_F" createVehicle [0,0,0];
@@ -33,7 +38,7 @@ if (!isNull _shepherd) then {
 		detach (_unit getVariable ["shepherdPole", objNull]);
 	}];
 };
-*/
+
 
 for "_i" from 1 to _count do {
 
@@ -54,7 +59,7 @@ for "_i" from 1 to _count do {
 				_animal setDir (random 360);
 				_herdArray set [1, _animal];
 
-				[_animal] call GRAD_herding_fnc_addEventhandler;
+				[_animal, _currentIndex] call GRAD_herding_fnc_addEventhandler;
 		} else {
 				_animal setDir (_animal getRelDir (_herdArray select 1));
 						
@@ -66,10 +71,6 @@ for "_i" from 1 to _count do {
 // fill herd with animal array
 _herdArray set [2, _herdAnimals];
 
-
-// get amount of herds created and add to counter
-private _currentIndex = (missionNamespace getVariable ["GRAD_herding_instanceCount", -1]) + 1;
-missionNamespace setVariable ["GRAD_herding_instanceCount", _currentIndex, true];
 
 // save herd index to make it globally und publicly accessible 
 private _instanceString = format ["GRAD_herding_instance_%1", _currentIndex];

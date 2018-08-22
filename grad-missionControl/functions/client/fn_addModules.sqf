@@ -47,6 +47,64 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ZEUS HELPERS", "Spawn Enemy inside Building",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    
+    private _nearestBuilding = nearestBuilding _position;
+    
+    private _group = createGroup east;
+    // possible chairs
+    {
+      private _position = _nearestBuilding buildingPos _forEachIndex;
+        if ([_position] call GRAD_missionControl_fnc_isInsideHouse) then {
+            private _unit = _group createUnit ["O_Soldier_F", _position, [], 0, "NONE"];
+            doStop _unit;
+            [_unit, true] call GRAD_civPartisans_fnc_equip;
+        };
+    } forEach ([_nearestBuilding, 7] call BIS_fnc_buildingPositions);
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ZEUS HELPERS", "Spawn Reinforcement Truck",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    
+    [_position] call GRAD_missionControl_fnc_createTruckReinforcements;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ZEUS HELPERS", "Spawn Shepherd",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+     private _group = createGroup civilian;
+     private _unit = _group createUnit ["C_Man_1", _position, [], 0, "NONE"];
+     [_unit, false] call GRAD_civPartisans_fnc_equip;
+     _unit setCombatMode "BLUE";
+     _unit setBehaviour "CARELESS";
+     _unit setSpeedMode "LIMITED";
+     _unit allowFleeing 0;
+
+     [_position, 35, _unit, "Sheep_random_F"] call GRAD_herding_fnc_create;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ZEUS HELPERS", "Shepherd Phone",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+     [_objectUnderCursor] call GRAD_herding_fnc_phoneThem;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+
   ["ZEUS HELPERS", "Toggle AI Charge",
   {
     // Get all the passed parameters
@@ -56,6 +114,16 @@ if (
     missionNamespace setVariable ["GRAD_MISSIONCONTROL_ZEUS_AI_CHARGE", !_current, true];
 
     hint format ["AI CHARGE: %1", !_current];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+
+  ["ZEUS HELPERS", "Outro Music",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    ["LeadTrack01_F_Curator"] remoteExec ["playMusic"];
 
   }] call Ares_fnc_RegisterCustomModule;
 

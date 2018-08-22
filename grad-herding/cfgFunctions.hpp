@@ -10,6 +10,7 @@ class GRAD_herding {
         file = grad-herding\functions\server;
 
         class addEventhandler;
+        class attachBarrel;
         class create;
         class getRandomWaypoint;
         class getWaypointFromShepherd;
@@ -18,6 +19,7 @@ class GRAD_herding {
         class loop;
         class makeSound;
         class moveAnimal;
+        class phoneThem;
         class removeAnimalFromHerd;
     };
     
