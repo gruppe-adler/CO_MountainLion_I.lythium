@@ -13,6 +13,7 @@ class grad_missionControl {
 
       class createChairCircle;
       class createTruckReinforcements;
+      class destroyTires;
       class disableChargeMode;
       class enableChargeMode;
       class getIntel_1;
