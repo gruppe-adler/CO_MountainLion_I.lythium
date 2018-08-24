@@ -1,15 +1,16 @@
-params ["_identifier"];
+params ["_object"];
 
-private _title = format ["Intel %1", _identifier];
-private _description = "";
+diag_log format ["_object %1", _object];
 
-switch _identifier do {
-	case 1: { _description = [] call GRAD_missionControl_fnc_getIntel_1; };	
-	case 2: { _description = [] call GRAD_missionControl_fnc_getIntel_2; };	
-	case 3: { _description = [] call GRAD_missionControl_fnc_getIntel_3; };
+private _name = _object getVariable ["Intel_Identifier", ""];
+private _intel = "<img image='pic\" + _name + ".jpg' />";
 
+player createDiaryRecord ["Diary", ["Intel", _intel]];
+	
+/*
+if (_identifier > 0) then {
+	["Intel found"] remoteExec ["hint"];
+} else {
+	hint "nothing found";
 };
-
-private _descriptionCombined = parseText format ["%1 <br /><br />الف ششاني <img image='pic\flag_full.paa' />"];
-
-player createDiaryRecord [_title, _descriptionCombined];
+*/

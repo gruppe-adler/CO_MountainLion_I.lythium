@@ -39,8 +39,8 @@ _parameters = [
 			"RHS_Ural_Civ_02",
 			"RHS_Ural_Open_Civ_02"
 	]],
-	["VEHICLES_COUNT", 20],
-	["MAX_GROUPS_COUNT", 30],
+	["VEHICLES_COUNT", 15],
+	["MAX_GROUPS_COUNT", 20],
 	["MIN_SPAWN_DISTANCE", 1500],
 	["MAX_SPAWN_DISTANCE", 2000],
 	["MIN_SKILL", 0],
@@ -50,7 +50,7 @@ _parameters = [
 	["ON_UNIT_CREATING", {}],
 	["ON_UNIT_CREATED", { _this call GRAD_civPartisans_fnc_equipTraffic; }],
 	["ON_UNIT_REMOVING", {}],
-	["DEBUG", true]
+	["DEBUG", false]
 ];
 
 // Start an instance of the traffic
