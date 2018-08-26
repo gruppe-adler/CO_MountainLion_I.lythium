@@ -1,6 +1,10 @@
 params ["_position"];
 
 private _vehicle = createVehicle ["rhsgref_ins_g_gaz66o_flat", _position];
+private _unit = (createGroup civilian) createUnit ["C_Man_1", [0,0,0], [], 0, "NONE"];
+[_unit, false] call GRAD_civPartians_fnc_equip;
+_unit assignAsDriver _vehicle;
+_unit moveInDriver _vehicle;
 
 [
 	_vehicle,
@@ -43,7 +47,7 @@ private _vehicle = createVehicle ["rhsgref_ins_g_gaz66o_flat", _position];
 
 		for "_i" from 1 to (count _positions) do {
 			private _attachPos = (_positions select _i) select 0; 
-			private _vectorDir (_positions select _i) select 1; 
+			private _vectorDir = (_positions select _i) select 1; 
 			private _vectorUp = (_positions select _i) select 2; 
 			
 			private _barrel = createSimpleObject ["Land_MetalBarrel_F", [0,0,0]];

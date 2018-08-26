@@ -8,31 +8,24 @@ if (
   // TODO check if below is necessary to uncomment
   waitUntil {not isNil "ares_category_list"};
 
-  ["ZEUS HELPERS", "Spawn Intel Map",
+  ["ZEUS HELPERS", "Briefing Done",
   {
     // Get all the passed parameters
     params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-    private _map = createVehicle ["Land_Map_Malden_F", _position, [], 0, "can_collide"];
-    private _mapHolder = createVehicle ["groundWeaponHolder", _position, [], 0, "can_collide"]; 
-    _mapHolder addItemCargoGlobal ["ItemMap", 1];
+    BRIEFING_DONE = true; publicVariable "BRIEFING_DONE";
 
-    [{
-      params ["_mapHolder", "_map"];
-      
-          [{
-            params ["_mapHolder", "_map"];
-            count ((getItemCargo _mapHolder) select 0) isEqualTo 0
-          }, {
-            params ["_mapHolder", "_map"];
-            deleteVehicle _map;
-            deleteVehicle _mapHolder;
-          }, [_mapHolder, _map]] call CBA_fnc_waitUntilAndExecute;
+  }] call Ares_fnc_RegisterCustomModule;
 
-    }, [_mapHolder, _map], 3] call CBA_fnc_waitAndExecute;
+  ["ZEUS HELPERS", "Crawl Music",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-    }] call Ares_fnc_RegisterCustomModule;
+    [5, 1] remoteExec ["fadeMusic"];
+    ["crawl"] remoteExec ["playMusic"];
 
+  }] call Ares_fnc_RegisterCustomModule;
 
   ["ZEUS HELPERS", "Create Chair Circle",
   {
@@ -78,6 +71,26 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ZEUS HELPERS", "Spawn Sheep Truck",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+     [_position] call GRAD_herding_fnc_createSheepTruck;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  /*
+  ["ZEUS HELPERS", "Spawn Barrel Truck",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+     [_position] call GRAD_herding_fnc_createBarrelTruck;
+
+  }] call Ares_fnc_RegisterCustomModule;
+  */
+
   ["ZEUS HELPERS", "Spawn Shepherd",
   {
     // Get all the passed parameters
@@ -105,6 +118,16 @@ if (
   }] call Ares_fnc_RegisterCustomModule;
 
 
+  ["ZEUS HELPERS", "Alert enemy AI around here",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [_position] spawn GRAD_missionControl_fnc_alertUnits;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+
   ["ZEUS HELPERS", "Toggle AI Charge",
   {
     // Get all the passed parameters
@@ -123,6 +146,7 @@ if (
     // Get all the passed parameters
     params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
+    [5, 1] remoteExec ["fadeMusic"];
     ["LeadTrack01_F_Curator"] remoteExec ["playMusic"];
 
   }] call Ares_fnc_RegisterCustomModule;

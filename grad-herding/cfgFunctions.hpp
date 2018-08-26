@@ -12,6 +12,8 @@ class GRAD_herding {
         class addEventhandler;
         class attachBarrel;
         class create;
+        class createBarrelTruck;
+        class createSheepTruck;
         class getRandomWaypoint;
         class getWaypointFromShepherd;
         class getWaypointInPanic;

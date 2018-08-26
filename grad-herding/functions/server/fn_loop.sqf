@@ -2,12 +2,12 @@ params ["_index"];
 
 diag_log format ["starting loop for herd %1", _index];
 
-private _targetDebug = "VR_3DSelector_01_incomplete_F" createVehicleLocal [0,0,0];
-private _targetDebug2 = "VR_3DSelector_01_default_F" createVehicleLocal [0,0,0];
+/*private _targetDebug = "VR_3DSelector_01_incomplete_F" createVehicleLocal [0,0,0];
+private _targetDebug2 = "VR_3DSelector_01_default_F" createVehicleLocal [0,0,0];*/
 
 [{
 	params ["_args", "_handle"];
-    _args params ["_index", "_targetDebug", "_targetDebug2"];
+    _args params ["_index"];
 
 	// save herd index to make it globally und publicly accessible 
 	private _instanceString = format ["GRAD_herding_instance_%1", _index];
@@ -50,7 +50,7 @@ private _targetDebug2 = "VR_3DSelector_01_default_F" createVehicleLocal [0,0,0];
 			};
 	};
 
-	_targetDebug setPos _targetPos;
+	// _targetDebug setPos _targetPos;
 
 	private _count = count (_animalArrayLiving + [_leadanimal]);
 	// animations and move command
@@ -63,14 +63,14 @@ private _targetDebug2 = "VR_3DSelector_01_default_F" createVehicleLocal [0,0,0];
 		private _distance = _x distance _targetPos;
 
 		[{
-			params ["_animal", "_distance", "_targetPos", "_targetDebug2"];
+			params ["_animal", "_distance", "_targetPos"];
 
-			[_animal, _distance, _targetPos, _targetDebug2] call GRAD_herding_fnc_moveAnimal;
+			[_animal, _distance, _targetPos] call GRAD_herding_fnc_moveAnimal;
 			[_animal] call GRAD_herding_fnc_makeSound;
 
-		}, [_x, _distance, _targetPos, _targetDebug2], random 2] call CBA_fnc_waitAndExecute;
+		}, [_x, _distance, _targetPos], random 2] call CBA_fnc_waitAndExecute;
 	 
 	} forEach _animalArrayLiving + [_leadanimal];
 
 
-}, 3, [_index, _targetDebug, _targetDebug2]] call CBA_fnc_addPerFrameHandler;
+}, 3, [_index]] call CBA_fnc_addPerFrameHandler;

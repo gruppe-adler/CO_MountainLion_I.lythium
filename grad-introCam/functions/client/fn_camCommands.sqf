@@ -1,5 +1,3 @@
-// by ALIAS, modified by nomisum
-
 params ["_shot", "_index"];
 
 _shot params [

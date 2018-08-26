@@ -1,5 +1,12 @@
 // obj , number
 
+/*
+
+// in group leader init
+[this, "Alpha", ["60", "60.1", "50"]] call GRAD_missionControl_fnc_setGroupFrequencies;
+
+*/
+
 params ["_unit", "_callsign", ["_frequency", ["133.7", "133.8", "33.7"]]];
 
 if (!isServer) exitWith {};

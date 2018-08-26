@@ -1,4 +1,11 @@
-private _vehicle = cursorObject;
+params ["_position"];
+
+private _vehicle = createVehicle ["rhsgref_ins_g_gaz66o_flat", _position];
+private _unit = (createGroup civilian) createUnit ["C_Man_1", [0,0,0], [], 0, "NONE"];
+
+[_unit, false] call GRAD_civPartisans_fnc_equip;
+_unit assignAsDriver _vehicle;
+_unit moveInDriver _vehicle;
 
 [
 	_vehicle,

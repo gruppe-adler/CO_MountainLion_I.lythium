@@ -6,20 +6,23 @@ class grad_missionControl {
       class addModules;
       class setMyFrequency;
       class setGroupFrequencies;
+      class stopMusic;
   };
 
 	class server {
 		  file = grad-missionControl\functions\server;
 
       class addIntel;
+      class alertUnits;
       class createChairCircle;
       class createTruckReinforcements;
+      class despawn;
       class destroyTires;
       class disableChargeMode;
       class enableChargeMode;
       class getPosInCircle;   
-      class initIntel;   
       class isInsideHouse;
       class readIntel;
+      class sitDown;
   };
 };

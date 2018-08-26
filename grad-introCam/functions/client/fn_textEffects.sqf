@@ -1,5 +1,9 @@
-titleText ["", "BLACK FADED", 0];
+titleText ["","BLACK FADED",999];
 sleep 5;
+
+if (player isEqualTo slot_platoonlead) then {
+	player action ["SwitchWeapon", player, player, 100];
+};
 
 playMusic "muse_high";
 
@@ -48,6 +52,10 @@ sleep 50;
 [ "B R I E F I N G", "27.08.2018" ] spawn BIS_fnc_infoText;
 
 10 fadeMusic 0;
+
+sleep 10;
+
+playMusic "";
 
 /*
 

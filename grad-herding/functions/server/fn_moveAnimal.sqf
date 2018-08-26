@@ -21,12 +21,9 @@ if (_distance > 8) then {
 
 // _animal moveTo _targetPos;
 
-
-private _xP = (_targetPos select 0);
-private _yP = (_targetPos select 1);
-_targetPos set [0, _xP + (random 1 - random 2)];
-_targetPos set [1, _yP + (random 1 - random 2)];
+_targetPos params ["_xP", "_yP"];
+_targetPos set [0, (_xP + random 1 - random 2)];
+_targetPos set [1, (_yP + random 1 - random 2)];
 
 _animal setDestination [_targetPos, "LEADER DIRECT", true];
-_targetDebug2 setPos _targetPos;
-//_targetDebug2 setPos (expectedDestination _animal);
+// _targetDebug2 setPos _targetPos;

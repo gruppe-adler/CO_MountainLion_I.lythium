@@ -11,6 +11,7 @@
 
 */
 
+if (!isServer) exitWith {};
 
 private _definitions = [
 	["FREE", getPos intro_camPos1, getPos intro_camPos2, intro_camTarget, intro_camTarget, 63.4, 0.4, 0.6, [0,0,20], [0,0,20]],

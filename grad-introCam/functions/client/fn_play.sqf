@@ -1,10 +1,10 @@
 // dont display for JIP
-if (didJIP) exitWith {};
-
+// if (didJIP) exitWith {};
+waitUntil {!isNull player};
 waitUntil {time > 0};
 
-[] call GRAD_introCam_fnc_playRecord;
 [] spawn GRAD_introCam_fnc_textEffects;
+[] call GRAD_introCam_fnc_playRecord;
 
 private _shots = missionNamespace getVariable ["GRAD_INTROCAM_SHOTS", []];
 
@@ -15,6 +15,8 @@ private _count = count _shots;
 
 
 cutText [" ", "BLACK IN", 3];
-_camera = "camera" camCreate (getpos player);
+private _camera = "camera" camCreate (getpos player);
 _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;
+
+STHud_UIMode = 1;

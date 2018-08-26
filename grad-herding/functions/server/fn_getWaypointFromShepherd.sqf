@@ -7,7 +7,7 @@ params ["_shepherd"];
 private _wp = _shepherd getVariable ["GRAD_HERDING_TARGET", []];
 
 if (count _wp isEqualTo 0)  then {
-	_wp = _shepherd getRelPos [GRAD_HERDING_DISTANCE_TO_SHEPHERD, (random 10 - random 20) - 180];
+	_wp = _shepherd getRelPos [GRAD_HERDING_DISTANCE_TO_SHEPHERD, (random 10 - random 20)];
 };
 
 _wp
