@@ -175,6 +175,13 @@ class cfgSounds {
 	  sound[]={"audio\grad_herding_shout_12.ogg", 1.5, 1};
 	  titles[]={};
 	};
+
+	class muezzin
+	{
+	  name="muezzin";
+	  sound[]={"audio\muezzin.ogg", 4, 1};
+	  titles[]={};
+	};
 };
 
 class cfgMusic {

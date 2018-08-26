@@ -10,9 +10,6 @@
 
 params ["_spawnPosition", ["_count",10], ["_shepherd", objNull], ["_animalType", "Goat_random_F"]];
 
-if (!isServer) exitWith {};
-
-
 // get amount of herds created and add to counter
 private _currentIndex = (missionNamespace getVariable ["GRAD_herding_instanceCount", -1]) + 1;
 missionNamespace setVariable ["GRAD_herding_instanceCount", _currentIndex, true];

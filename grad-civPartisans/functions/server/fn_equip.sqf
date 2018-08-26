@@ -9,8 +9,6 @@ hint str (civmodule_1 getVariable ["#active",false]);
 
 params ["_unit", ["_armed", false]];
 
-if (!isServer) exitWith {};
-
 private _uniform = selectRandom [
 	"LOP_U_TAK_Civ_Fatigue_01",
 	"LOP_U_TAK_Civ_Fatigue_02",

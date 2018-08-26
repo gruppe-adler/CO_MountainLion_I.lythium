@@ -20,3 +20,5 @@ _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;
 
 STHud_UIMode = 1;
+
+setViewDistance 4000;

@@ -20,3 +20,6 @@ private _alertUnits = [];
   	sleep 0.1;
 
 } forEach _alertUnits;
+
+"Group" setDynamicSimulationDistance 1000;
+"Vehicle" setDynamicSimulationDistance 1000;

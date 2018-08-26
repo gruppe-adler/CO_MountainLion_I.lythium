@@ -20,6 +20,7 @@ class grad_missionControl {
       class destroyTires;
       class disableChargeMode;
       class enableChargeMode;
+      class fillSupplyBox;
       class getPosInCircle;   
       class isInsideHouse;
       class readIntel;

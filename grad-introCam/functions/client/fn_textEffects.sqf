@@ -44,10 +44,12 @@ sleep 5;
 _introPicWhite ctrlsetFade 1;
 _introPicWhite ctrlCommit 10;
 
-sleep 10;
+sleep 20;
+
+ml_mosque say3D ["muezzin", 1000];
 
 
-sleep 50;
+sleep 40;
 
 [ "B R I E F I N G", "27.08.2018" ] spawn BIS_fnc_infoText;
 

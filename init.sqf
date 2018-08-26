@@ -10,4 +10,4 @@ enableSentences false;
 ["OPF_F", "Taliban"] call GRAD_Loadout_fnc_FactionSetLoadout;
 call compile preprocessFileLineNumbers "Engima\Traffic\Init.sqf";
 
-setViewDistance 4000;
+setViewDistance 8000;
