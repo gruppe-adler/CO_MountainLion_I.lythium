@@ -1,6 +1,6 @@
 private _introHeli2 = "RHS_UH60M_d" createVehicleLocal [8080.6,13585.4,127.648];
 
-createVehicleCrew _introHeli2;
+// createVehicleCrew _introHeli2;
 
 _introHeli2 engineOn true;
 
@@ -10,7 +10,7 @@ _introHeli2 engineOn true;
 
 private _introHeli = "RHS_UH60M_d" createVehicleLocal [8293.22,13342,120];
 
-createVehicleCrew _introHeli;
+// createVehicleCrew _introHeli;
 
 _introHeli engineOn true;
 
@@ -19,7 +19,7 @@ _introHeli engineOn true;
 
 private _introHeli3 = "RHS_UH60M_d" createVehicleLocal [8375.66,13307.5,120];
 
-createVehicleCrew _introHeli3;
+// createVehicleCrew _introHeli3;
 
 _introHeli3 engineOn true;
 
@@ -35,9 +35,11 @@ _introHeli3 engineOn true;
 	_introHeli2 setvariable ["BIS_fnc_unitPlay_terminate",true];
 	_introHeli3 setvariable ["BIS_fnc_unitPlay_terminate",true];
 
+	/*
 	{_introHeli deleteVehicleCrew _x} forEach crew _introHeli;
 	{_introHeli2 deleteVehicleCrew _x} forEach crew _introHeli2;
 	{_introHeli3 deleteVehicleCrew _x} forEach crew _introHeli3;
+	*/
 
 	deleteVehicle _introHeli;
 	deleteVehicle _introHeli2;

@@ -5,8 +5,10 @@ if (!isServer) exitWith {};
 // default mags
 _box addMagazineCargoGlobal ["30Rnd_556x45_Stanag", 100];
 
-// javelin / AT
-_box addMagazineCargoGlobal ["rhs_fgm148_magazine_AT", 4];
+// AT
+_box addMagazineCargoGlobal ["rhs_mag_maaws_HEDP", 5];
+_box addMagazineCargoGlobal ["rhs_mag_maaws_HE", 5];
+_box addMagazineCargoGlobal ["rhs_mag_maaws_HEAT", 5];
 
 // MG
 _box addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW", 20];
@@ -31,7 +33,7 @@ _box addMagazineCargoGlobal ["HandGrenade", 20];
 _box addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010", 30];
 
 // additional AT
-_box addWeaponCargoGlobal ["rhs_weap_M136", 10];
+_box addWeaponCargoGlobal ["rhs_weap_M136", 5];
 
 // entrenching
 _box addItemCargoGlobal ["ACE_entrenchingTool", 10];

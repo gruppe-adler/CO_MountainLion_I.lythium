@@ -1,10 +1,6 @@
 titleText ["","BLACK FADED",999];
 sleep 5;
 
-if (player isEqualTo slot_platoonlead) then {
-	player action ["SwitchWeapon", player, player, 100];
-};
-
 playMusic "muse_high";
 
 titleText ["", "BLACK IN", 15];
@@ -47,6 +43,11 @@ _introPicWhite ctrlCommit 10;
 sleep 20;
 
 ml_mosque say3D ["muezzin", 1000];
+
+if (typeOf player isEqualTo "B_officer_F") then {
+	slot_platoonlead action ["WeaponOnBack", slot_platoonlead];
+	//player action ["SwitchWeapon", player, player, 100];
+};
 
 
 sleep 40;

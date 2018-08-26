@@ -1,5 +1,20 @@
+
 waitUntil {!isNull player};
 waitUntil {  time > 3 };
+
+{
+  _x addEventHandler ["CuratorWaypointPlaced", {
+      params ["_curator", "_group", "_waypointID"];
+
+  if (missionNamespace getVariable ["GRAD_MISSIONCONTROL_ZEUS_AI_CHARGE", false]) then {
+
+        [_group, _waypointID] call GRAD_missionControl_fnc_enableChargeMode;
+  };
+
+  }];
+} forEach allCurators;
+
+
 if (  
   isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")
 ) then
@@ -104,7 +119,7 @@ if (
      _unit setSpeedMode "LIMITED";
      _unit allowFleeing 0;
 
-     [_position, 35, _unit, "Sheep_random_F"] call GRAD_herding_fnc_create;
+     [_position, 20, _unit, "Sheep_random_F"] call GRAD_herding_fnc_create;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -151,18 +166,24 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ZEUS HELPERS", "Civ OFF",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    civpresence_module setVariable ["#active", false, true];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+   ["ZEUS HELPERS", "Civ ON",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    civpresence_module setVariable ["#active", true, true];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  
+
 };
-
-
-{
-  _x addEventHandler ["CuratorWaypointPlaced", {
-      params ["_curator", "_group", "_waypointID"];
-
-  if (missionNamespace getVariable ["GRAD_MISSIONCONTROL_ZEUS_AI_CHARGE", false]) then {
-
-        [_group, _waypointID] call GRAD_missionControl_fnc_enableChargeMode;
-  };
-
-  }];
-} forEach allCurators;
-

@@ -2,6 +2,8 @@ params ["_unit"];
 
 _unit playMoveNow "Acts_listeningToRadio_Loop";
 
+_unit setVariable ["grad_herding_phoneCount", 0, true];
+
 _unit addEventHandler ["AnimDone", {
 		params ["_unit", "_anim"];
 

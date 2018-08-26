@@ -14,6 +14,7 @@ _animal setVariable ["GRAD_herding_index", _index];
 private _panicState = format ["GRAD_herding_instance_%2_panicState", _index];
 missionNamespace setVariable [_panicState, false, true];
 
+/*
 _animal addEventhandler ["FiredNear", {
 		params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 
@@ -35,3 +36,4 @@ _animal addEventhandler ["FiredNear", {
 
 		_animal removeAllEventHandlers "FiredNear";
 }];
+*/

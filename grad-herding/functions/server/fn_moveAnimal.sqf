@@ -1,4 +1,4 @@
-params ["_animal", "_distance", "_targetPos", "_targetDebug2"];
+params ["_animal", "_distance", "_targetPos"];
 
 if (_distance > 8) then {
 	_animal setAnimSpeedCoef 2;

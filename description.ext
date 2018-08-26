@@ -80,6 +80,8 @@ class cfgFunctions {
 };
 
 class Loadouts {
+	#define LASERS       // equip weapon laser
+	
     baseDelay = 1;      // base delay in seconds before applying loadouts on mission start
     handleRadios = 1;   // radios are handled by grad-loadout
     resetLoadout = 1;   // start with empty loadouts instead of modifying existing loadout
@@ -179,7 +181,7 @@ class cfgSounds {
 	class muezzin
 	{
 	  name="muezzin";
-	  sound[]={"audio\muezzin.ogg", 4, 1};
+	  sound[]={"audio\muezzin.ogg", 6, 1};
 	  titles[]={};
 	};
 };
