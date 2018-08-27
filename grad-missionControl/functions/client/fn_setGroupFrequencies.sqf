@@ -7,7 +7,7 @@
 
 */
 
-params ["_unit", "_callsign", ["_frequency", ["133.7", "133.8", "33.7"]]];
+params ["_unit", "_callsign", ["_frequency", ["40", "40", "40"]]];
 
 if (!isServer) exitWith {};
 

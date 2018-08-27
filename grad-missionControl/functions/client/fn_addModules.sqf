@@ -23,6 +23,8 @@ if (
   // TODO check if below is necessary to uncomment
   waitUntil {not isNil "ares_category_list"};
 
+
+
   ["ZEUS HELPERS", "Briefing Done",
   {
     // Get all the passed parameters
@@ -42,18 +44,7 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
-  ["ZEUS HELPERS", "Create Chair Circle",
-  {
-    // Get all the passed parameters
-    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-    
-    private _count =count (playableUnits + switchableUnits);
-    
-    // possible chairs
-    private _chairs = ["Land_CampingChair_V1_F", _position, _count] call GRAD_missionControl_fnc_createChairCircle;
-
-  }] call Ares_fnc_RegisterCustomModule;
 
   ["ZEUS HELPERS", "Spawn Enemy inside Building",
   {
@@ -181,6 +172,40 @@ if (
     params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     civpresence_module setVariable ["#active", true, true];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ATAKA", "Show List of DIE & SPECTATE Players",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _spectatorList = missionNameSpace getVariable ["GRAD_permaChoice_spectatorList", []];
+    private _stringify = str _spectatorList;
+    ["AllSpectators", [_stringify]] call bis_fnc_showNotification;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ATAKA", "Force Respawn everyone here",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    missionNameSpace setVariable ["ATAKA_RespawnPosition", _position, true];
+    [] remoteExec ["GRAD_permaChoice_fnc_forceRespawn", [0,-2] select isDedicated, true];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ZEUS HELPERS", "Create Chair Circle",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    
+    private _count =count (playableUnits + switchableUnits);
+    
+    // possible chairs
+    private _chairs = ["Land_CampingChair_V1_F", _position, _count] call GRAD_missionControl_fnc_createChairCircle;
 
   }] call Ares_fnc_RegisterCustomModule;
 
